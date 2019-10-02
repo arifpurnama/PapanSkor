@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="horizontal">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/txt_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SCORE"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBodas"
+        android:gravity="center"
+        android:background="@color/colorPrimary"/>
+
+    <TextClock
+        android:id="@+id/txt_clock"
+        android:layout_below="@id/txt_score"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/ly_score"
+        android:layout_below="@id/txt_clock"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tim A"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorBodas"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/show_sTimA"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:text="0"
+                android:textSize="100sp"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/btn_TimA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hitung"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:onClick="HitungTimA"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tim B"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorBodas"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/show_sTimB"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:text="0"
+                android:textSize="100sp"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/btn_TimB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hitung"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:onClick="HitungTimB"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_below="@id/ly_score"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:textStyle="bold"
+        android:background="@color/colorRed"
+        android:textSize="25dp"
+        android:textColor="@color/colorBodas"
+        android:onClick="ResetHitung"/>
+
+    <TextView
+        android:layout_below="@id/reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Created By Arif Purnama"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_margin="10dp"/>
+
+</RelativeLayout>
